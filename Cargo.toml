@@ -1,0 +1,47 @@
+[package]
+name = "leptos-wasi-test"
+authors = ["itowlson <ivan.towlson@fermyon.com>"]
+description = ""
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = [ "cdylib" ]
+
+[dependencies]
+anyhow = "1"
+console_error_panic_hook = "0.1"
+leptos = {git = "https://github.com/leptos-rs/leptos"}
+leptos_integration_utils = { git = "https://github.com/leptos-rs/leptos", optional = true }
+hydration_context = {version = "0.2.0-beta5", optional = true}
+leptos_meta = {git = "https://github.com/leptos-rs/leptos"}
+leptos_router = {git = "https://github.com/leptos-rs/leptos"}
+leptos_wasi = { path = "../leptos_wasi", optional = true }
+spin-sdk = { version = "3", optional = true }
+wasm-bindgen = { version = "0.2", optional = true }
+wasi = { version = "=0.13.1", optional = true }
+
+[workspace]
+
+[features]
+csr = ["leptos/csr"]
+hydrate = ["leptos/hydrate", "dep:wasm-bindgen", "dep:hydration_context"]
+ssr = [
+  "leptos/ssr",
+  "leptos_meta/ssr",
+  "leptos_router/ssr",
+  "leptos/spin",
+  "dep:spin-sdk",
+  "dep:leptos_wasi",
+  "dep:wasi",
+  "dep:leptos_integration_utils"
+]
+
+[package.metadata.leptos]
+# The name used by wasm-bindgen/cargo-leptos for the JS/WASM bundle. Defaults to the crate name   
+output-name = "leptos_wasi_test"
+style-file = "style/main.scss"
+bin-features = ["ssr"]
+bin-default-features = true
+lib-features = ["hydrate"]
+lib-default-features = false
