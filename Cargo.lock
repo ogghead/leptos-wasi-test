@@ -494,29 +494,15 @@ dependencies = [
 [[package]]
 name = "hydration_context"
 version = "0.2.0-rc0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b3572b2778f74f110d907744b8d44be3602f1588aa5b7a098d8911a5d806b7f1"
-dependencies = [
- "futures",
- "once_cell",
- "or_poisoned 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "pin-project-lite",
- "serde",
- "throw_error 0.2.0-rc0 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "hydration_context"
-version = "0.2.0-rc0"
 source = "git+https://github.com/leptos-rs/leptos#2ef1723607644f2484d2c115b89df54947f8f124"
 dependencies = [
  "futures",
  "js-sys",
  "once_cell",
- "or_poisoned 0.1.0 (git+https://github.com/leptos-rs/leptos)",
+ "or_poisoned",
  "pin-project-lite",
  "serde",
- "throw_error 0.2.0-rc0 (git+https://github.com/leptos-rs/leptos)",
+ "throw_error",
  "wasm-bindgen",
 ]
 
@@ -599,7 +585,7 @@ dependencies = [
  "cfg-if",
  "either_of",
  "futures",
- "hydration_context 0.2.0-rc0 (git+https://github.com/leptos-rs/leptos)",
+ "hydration_context",
  "leptos-spin-macro",
  "leptos_config",
  "leptos_dom",
@@ -607,7 +593,7 @@ dependencies = [
  "leptos_macro",
  "leptos_server",
  "oco_ref",
- "or_poisoned 0.1.0 (git+https://github.com/leptos-rs/leptos)",
+ "or_poisoned",
  "paste",
  "rand",
  "reactive_graph",
@@ -619,7 +605,7 @@ dependencies = [
  "slotmap",
  "tachys",
  "thiserror",
- "throw_error 0.2.0-rc0 (git+https://github.com/leptos-rs/leptos)",
+ "throw_error",
  "typed-builder",
  "typed-builder-macro",
  "wasm-bindgen",
@@ -642,11 +628,8 @@ dependencies = [
 name = "leptos-wasi-test"
 version = "0.1.0"
 dependencies = [
- "anyhow",
  "console_error_panic_hook",
- "hydration_context 0.2.0-rc0 (registry+https://github.com/rust-lang/crates.io-index)",
  "leptos",
- "leptos_integration_utils",
  "leptos_meta",
  "leptos_router",
  "leptos_wasi",
@@ -673,7 +656,7 @@ version = "0.7.0-rc0"
 source = "git+https://github.com/leptos-rs/leptos#2ef1723607644f2484d2c115b89df54947f8f124"
 dependencies = [
  "js-sys",
- "or_poisoned 0.1.0 (git+https://github.com/leptos-rs/leptos)",
+ "or_poisoned",
  "reactive_graph",
  "send_wrapper",
  "tachys",
@@ -704,7 +687,7 @@ version = "0.7.0-rc0"
 source = "git+https://github.com/leptos-rs/leptos#2ef1723607644f2484d2c115b89df54947f8f124"
 dependencies = [
  "futures",
- "hydration_context 0.2.0-rc0 (git+https://github.com/leptos-rs/leptos)",
+ "hydration_context",
  "leptos",
  "leptos_config",
  "leptos_meta",
@@ -742,7 +725,7 @@ dependencies = [
  "indexmap",
  "leptos",
  "once_cell",
- "or_poisoned 0.1.0 (git+https://github.com/leptos-rs/leptos)",
+ "or_poisoned",
  "send_wrapper",
  "wasm-bindgen",
  "web-sys",
@@ -761,7 +744,7 @@ dependencies = [
  "leptos",
  "leptos_router_macro",
  "once_cell",
- "or_poisoned 0.1.0 (git+https://github.com/leptos-rs/leptos)",
+ "or_poisoned",
  "percent-encoding",
  "reactive_graph",
  "send_wrapper",
@@ -791,8 +774,8 @@ dependencies = [
  "base64",
  "codee",
  "futures",
- "hydration_context 0.2.0-rc0 (git+https://github.com/leptos-rs/leptos)",
- "or_poisoned 0.1.0 (git+https://github.com/leptos-rs/leptos)",
+ "hydration_context",
+ "or_poisoned",
  "reactive_graph",
  "send_wrapper",
  "serde",
@@ -810,7 +793,7 @@ dependencies = [
  "bytes",
  "futures",
  "http",
- "hydration_context 0.2.0-rc0 (git+https://github.com/leptos-rs/leptos)",
+ "hydration_context",
  "leptos",
  "leptos_integration_utils",
  "leptos_macro",
@@ -821,7 +804,7 @@ dependencies = [
  "routefinder",
  "server_fn",
  "thiserror",
- "throw_error 0.2.0-rc0 (git+https://github.com/leptos-rs/leptos)",
+ "throw_error",
  "wasi 0.13.1+wasi-0.2.0",
 ]
 
@@ -943,12 +926,6 @@ name = "once_cell"
 version = "1.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1261fe7e33c73b354eab43b1273a57c8f967d0391e80353e51f764ac02cf6775"
-
-[[package]]
-name = "or_poisoned"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8c04f5d74368e4d0dfe06c45c8627c81bd7c317d52762d118fb9b3076f6420fd"
 
 [[package]]
 name = "or_poisoned"
@@ -1213,8 +1190,8 @@ dependencies = [
  "async-lock",
  "futures",
  "guardian",
- "hydration_context 0.2.0-rc0 (git+https://github.com/leptos-rs/leptos)",
- "or_poisoned 0.1.0 (git+https://github.com/leptos-rs/leptos)",
+ "hydration_context",
+ "or_poisoned",
  "pin-project-lite",
  "rustc-hash",
  "send_wrapper",
@@ -1231,7 +1208,7 @@ source = "git+https://github.com/leptos-rs/leptos#2ef1723607644f2484d2c115b89df5
 dependencies = [
  "guardian",
  "itertools",
- "or_poisoned 0.1.0 (git+https://github.com/leptos-rs/leptos)",
+ "or_poisoned",
  "paste",
  "reactive_graph",
  "reactive_stores_macro",
@@ -1428,7 +1405,7 @@ dependencies = [
  "serde_qs",
  "server_fn_macro_default",
  "thiserror",
- "throw_error 0.2.0-rc0 (git+https://github.com/leptos-rs/leptos)",
+ "throw_error",
  "url",
  "wasm-bindgen",
  "wasm-bindgen-futures",
@@ -1630,7 +1607,7 @@ dependencies = [
  "next_tuple",
  "oco_ref",
  "once_cell",
- "or_poisoned 0.1.0 (git+https://github.com/leptos-rs/leptos)",
+ "or_poisoned",
  "parking_lot",
  "paste",
  "reactive_graph",
@@ -1638,7 +1615,7 @@ dependencies = [
  "rustc-hash",
  "send_wrapper",
  "slotmap",
- "throw_error 0.2.0-rc0 (git+https://github.com/leptos-rs/leptos)",
+ "throw_error",
  "wasm-bindgen",
  "web-sys",
 ]
@@ -1661,15 +1638,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.87",
-]
-
-[[package]]
-name = "throw_error"
-version = "0.2.0-rc0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f94a0abd02fad5a46b04748c89c32d2b5784bbb046fb6675f186e0bd45cd415c"
-dependencies = [
- "pin-project-lite",
 ]
 
 [[package]]
