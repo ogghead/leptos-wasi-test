@@ -10,5 +10,5 @@ pub fn hydrate() {
 
     console_error_panic_hook::set_once();
 
-    leptos::mount::mount_to_body(App);
+    leptos::mount::hydrate_body(App);
 }
