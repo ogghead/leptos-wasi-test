@@ -11,12 +11,12 @@ crate-type = [ "cdylib" ]
 [dependencies]
 anyhow = "1"
 console_error_panic_hook = "0.1"
-leptos = {git = "https://github.com/leptos-rs/leptos"}
+hydration_context = { version = "0.2.0-beta5", optional = true }
+leptos = { git = "https://github.com/leptos-rs/leptos" }
 leptos_integration_utils = { git = "https://github.com/leptos-rs/leptos", optional = true }
-hydration_context = {version = "0.2.0-beta5", optional = true}
-leptos_meta = {git = "https://github.com/leptos-rs/leptos"}
-leptos_router = {git = "https://github.com/leptos-rs/leptos"}
-leptos_wasi = { path = "../leptos_wasi", optional = true }
+leptos_meta = { git = "https://github.com/leptos-rs/leptos" }
+leptos_router = { git = "https://github.com/leptos-rs/leptos" }
+leptos_wasi = { git = "https://github.com/ogghead/leptos_wasi", branch = "pre-rc1-building", optional = true }
 spin-sdk = { version = "3", optional = true }
 wasm-bindgen = { version = "0.2", optional = true }
 wasi = { version = "=0.13.1", optional = true }

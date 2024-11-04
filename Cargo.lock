@@ -804,6 +804,7 @@ dependencies = [
 [[package]]
 name = "leptos_wasi"
 version = "0.0.1"
+source = "git+https://github.com/ogghead/leptos_wasi?branch=pre-rc1-building#fd241a78ac7587d078939ea8f94e9634a47b8dc3"
 dependencies = [
  "any_spawner",
  "bytes",
