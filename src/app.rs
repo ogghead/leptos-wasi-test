@@ -3,6 +3,7 @@ use leptos::{prelude::*, task::spawn_local};
 use leptos_meta::*;
 use leptos_router::*;
 
+#[cfg(feature = "ssr")]
 pub fn shell(options: LeptosOptions) -> impl IntoView {
     view! {
         <!DOCTYPE html>
