@@ -15,7 +15,7 @@ source = "target/wasm32-wasip1/release/leptos_wasi_test.wasm"
 allowed_outbound_hosts = []
 key_value_stores = ["default"]
 [component.leptos-wasi-test.build]
-command = "cargo leptos build --release && LEPTOS_OUTPUT_NAME=leptos_wasi_test cargo component build --release --lib --target wasm32-wasip1 --no-default-features --features ssr"
+command = "cargo leptos build --release && LEPTOS_OUTPUT_NAME=leptos_wasi_test cargo build --release --lib --target wasm32-wasip1 --no-default-features --features ssr"
 watch = ["src/**/*.rs", "Cargo.toml"]
 
 [[trigger.http]]
