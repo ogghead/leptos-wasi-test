@@ -1,3 +1,5 @@
+use std::sync::Arc;
+
 use leptos::config::get_configuration;
 use leptos_wasi::prelude::{Executor, IncomingRequest, ResponseOutparam, WasiExecutor};
 use wasi::exports::http::incoming_handler::Guest;
@@ -25,7 +27,8 @@ impl Guest for LeptosServer {
 async fn handle_request(request: IncomingRequest, response_out: ResponseOutparam) {
     use leptos_wasi::prelude::Handler;
 
-    let conf = get_configuration(None).unwrap();
+    let mut conf = get_configuration(None).unwrap();
+    conf.leptos_options.output_name = Arc::from("leptos_wasi_test");
     let leptos_options = conf.leptos_options;
 
     Handler::build(request, response_out)
